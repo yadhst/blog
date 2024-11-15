@@ -1,6 +1,7 @@
 <script lang="ts" module>
     import { Eye, Clock, Calendar } from "lucide-svelte";
 
+    import LazyImage from "$lib/components/elements/lazy-image.svelte";
     import { formatReadingTime } from "$lib/utils";
     import { Badge } from "$lib/components/ui/badge";
 
@@ -25,7 +26,7 @@
         class="group relative h-96 w-full overflow-hidden rounded-md border border-border px-4 py-4"
     >
         <div class="pointer-events-none absolute inset-0">
-            <img
+            <LazyImage
                 src={cover}
                 alt="cover"
                 class="size-full object-cover brightness-50 transition-all duration-200 ease-in-out group-hover:rotate-1 group-hover:scale-110 group-hover:blur-sm"

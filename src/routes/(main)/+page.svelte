@@ -15,6 +15,7 @@
     } from "lucide-svelte";
 
     import { updateSearchParams } from "$lib/utils";
+    import LazyImage from "$lib/components/elements/lazy-image.svelte";
     import BlogCard from "$lib/components/cards/blog-card.svelte";
     import TagsFilter from "$lib/components/features/tags-filter.svelte";
     import PostsPagination from "$lib/components/features/posts-pagination.svelte";
@@ -62,7 +63,7 @@
             class="relative h-72 w-full overflow-hidden rounded-lg border border-border"
         >
             <div class="pointer-events-none absolute inset-0 z-0">
-                <img
+                <LazyImage
                     src={featuredPost.metadata.cover}
                     alt="cover"
                     class="size-full object-cover brightness-50"

@@ -4,6 +4,7 @@
 
     import { formatReadingTime } from "$lib/utils";
     import Metadata from "$lib/components/layouts/metadata.svelte";
+    import LazyImage from "$lib/components/elements/lazy-image.svelte";
     import DisqusThread from "$lib/components/features/disqus-thread.svelte";
     import { Badge } from "$lib/components/ui/badge";
     import type { PageData } from "./$types";
@@ -45,7 +46,7 @@
 
 <div class="flex flex-col gap-10">
     <div class="h-72 w-full overflow-hidden rounded-lg border border-border">
-        <img
+        <LazyImage
             src={data.post.metadata.cover}
             alt="cover"
             class="pointer-events-none size-full object-cover"
